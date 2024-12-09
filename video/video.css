@@ -1,0 +1,138 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #000;
+    transition: background-color 1s ease-in-out; /* Transição mais rápida para a cor de fundo */
+}
+
+/* Título com corações */
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+    transition: color 1s ease-in-out; /* Transição para o título */
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #000;
+    margin: 0 20px;
+}
+
+/* Corações */
+.heart-left, .heart-right {
+    width: 50px;
+    height: auto;
+}
+
+/* Estilo do contêiner de vídeo */
+.video-container {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: background-color 1s ease-in-out; /* Transição para o fundo do vídeo */
+}
+
+.video-wrapper {
+    width: 80%;
+    max-width: 960px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: background-color 1s ease-in-out;
+}
+
+iframe {
+    border-radius: 10px;
+}
+
+/* Botão */
+.button-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.button {
+    background-color: #d36ed3;
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #803b73;
+    transform: scale(1.1);
+}
+
+/* Modo claro (inicial) */
+body {
+    background-color: #f2f2f2; /* Cor de fundo clara */
+    color: #000; /* Cor de texto escuro */
+}
+
+/* Modo escuro (quando a classe 'dark-mode' é aplicada) */
+.dark-mode {
+    background-color: #2c2c2c; /* Cor de fundo escura */
+    color: #e0e0e0; /* Cor de texto clara */
+}
+
+.dark-mode .title-container h1 {
+    color: #fff; /* Título branco no modo escuro */
+}
+
+.dark-mode .video-wrapper {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo mais escuro para o vídeo */
+}
+
+.dark-mode .button {
+    background-color: #6a4b8d; /* Botão com cor de fundo mais escura */
+}
+
+/* Responsividade */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    .video-wrapper {
+        padding: 10px;
+    }
+
+    .button {
+        width: 80%;
+        padding: 12px 0;
+    }
+}
+
+/* Animação de fade de background */
+.transition-background {
+    animation: fade-background 2s ease-in-out; /* Transição mais rápida (2 segundos) */
+}
+
+@keyframes fade-background {
+    0% {
+        background-color: #f2f2f2; /* Cor inicial (claro) */
+    }
+    50% {
+        background-color: #aaa; /* Cor intermediária */
+    }
+    100% {
+        background-color: #2c2c2c; /* Cor final (escuro) */
+    }
+}
